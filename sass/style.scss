@@ -1,0 +1,34 @@
+body {
+  ul {
+    list-style-type: none;
+  }
+}
+
+.navigation {
+  position:relative;
+  z-index: 5;
+  background:#a0d6b4;
+  width:100%;
+  position: fixed;
+  z-index: 3;
+  height: 35px;
+  text-align: center;
+  background-color: #a0d6b4;
+  line-height: 35px;
+  padding-left: 30px;
+
+  .main-navigation {
+
+  }
+
+  .container-header {
+    width:100%;
+
+    .heading {
+      padding-left: 30px;
+      text-transform: uppercase;
+      color: white;
+      display: inline-block;
+    }
+  }
+}
