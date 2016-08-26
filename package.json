@@ -1,23 +1,20 @@
 {
-  "name": "mbg",
+  "name": "",
   "version": "1.0.0",
-  "description": "MBG Articles",
+  "description": "This app is a memory card game.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/catm705/mbg.git"
+    "start": "NODE_PATH=$NODE_PATH:./src node server",
+    "dev": "npm start & webpack-dev-server --progress --colors"
   },
   "keywords": [],
   "author": "Cat Gelinas",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/catm705/mbg/issues"
-  },
-  "homepage": "https://github.com/catm705/mbg#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap-sass": "^3.3.7",
+    "express": "^4.14.0",
+    "jquery": "^3.1.0"
   }
 }
