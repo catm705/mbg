@@ -8,6 +8,10 @@ app.get( '/', function( req, res ) {
 	res.send("Hello Peeps!");
 } );
 
+app.get( '/articles', function( req, res ) {
+	console.log("I AM IN ARTICLES")
+} );
+
 app.all('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'public/index.html'));
 });
