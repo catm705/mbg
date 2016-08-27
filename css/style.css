@@ -23,3 +23,15 @@ body ul {
 
 .container .index-list {
   margin-top: 50px; }
+  .container .index-list .content-container .content-title {
+    font-size: 18px; }
+    .container .index-list .content-container .content-title img {
+      height: 200px;
+      width: 200px;
+      float: right;
+      margin: 15px 5px 5px 5px; }
+  .container .index-list .content-container .content-body {
+    max-height: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px; }

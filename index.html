@@ -19,8 +19,16 @@
 		</header>
 		<div class="container" ng-controller="ArticlesController">
 			<ul class="index-list">
-		    <li ng-cloak class="content-container" ng-repeat="content in contentCollection">
-					<span ng-bind="content.title"></span>
+
+		    <li class="content-container" ng-repeat="content in contentCollection">
+
+					<div class="content-title">
+		        <h3 ng-bind="content.title"></h3>
+						<img src="content.image" />
+      		</div>
+					<p class="content-body" ng-bind="content.body"></p>
+
+
 		    </li>
 		  </ul>
 		</div>

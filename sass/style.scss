@@ -34,6 +34,28 @@ body {
 .container {
   .index-list {
     margin-top: 50px;
-    
+
+    .content-container {
+      .content-title {
+        font-size: 18px;
+
+        img {
+          height: 200px;
+          width: 200px;
+          float: right;
+          margin: 15px 5px 5px 5px;
+        }
+      }
+
+
+
+      .content-body {
+        max-height: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 10px;
+      }
+    }
+
   }
 }
