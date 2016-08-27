@@ -19,6 +19,7 @@ body ul {
       padding-left: 30px;
       text-transform: uppercase;
       color: white;
+      font-weight: 400;
       display: inline-block; }
 
 .container .index-list {
