@@ -15,19 +15,25 @@ body {
   text-align: center;
   line-height: 35px;
   padding-left: 30px;
+  margin-bottom: 30px;
 
   .main-navigation {
+    .container-header {
+      width:100%;
 
-  }
-
-  .container-header {
-    width:100%;
-
-    .heading {
-      padding-left: 30px;
-      text-transform: uppercase;
-      color: white;
-      display: inline-block;
+      .heading {
+        padding-left: 30px;
+        text-transform: uppercase;
+        color: white;
+        display: inline-block;
+      }
     }
+  }
+}
+
+.container {
+  .index-list {
+    margin-top: 50px;
+    
   }
 }

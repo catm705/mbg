@@ -11,11 +11,15 @@ body ul {
   height: 35px;
   text-align: center;
   line-height: 35px;
-  padding-left: 30px; }
-  .navigation .container-header {
+  padding-left: 30px;
+  margin-bottom: 30px; }
+  .navigation .main-navigation .container-header {
     width: 100%; }
-    .navigation .container-header .heading {
+    .navigation .main-navigation .container-header .heading {
       padding-left: 30px;
       text-transform: uppercase;
       color: white;
       display: inline-block; }
+
+.container .index-list {
+  margin-top: 50px; }
