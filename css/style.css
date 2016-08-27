@@ -34,4 +34,10 @@ body ul {
     max-height: 220px;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 10px 10px 10px 0px; }
+    padding: 10px 10px 5px 0px; }
+  .container .index-list .content-container a {
+    color: #a0d6b4;
+    font-style: italic; }
+    .container .index-list .content-container a:hover {
+      text-decoration: none;
+      color: green; }
