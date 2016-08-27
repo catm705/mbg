@@ -3,4 +3,4 @@ In the terminal:
 
 ```gulp```
 
-```npm run dev```
+```live-server```
