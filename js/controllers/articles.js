@@ -15,8 +15,6 @@
               $scope.contentCollection.forEach(
                 function( c ) {
                   c.body = String( c.body ).replace(/<[^>]+>/gm, '');
-                
-                  console.log(c.image);
                 }
               );
 
