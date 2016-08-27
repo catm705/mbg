@@ -11,9 +11,9 @@ body {
   width:100%;
   position: fixed;
   z-index: 3;
-  height: 35px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
-  line-height: 35px;
   padding-left: 30px;
   margin-bottom: 30px;
 
@@ -33,7 +33,7 @@ body {
 
 .container {
   .index-list {
-    margin-top: 50px;
+    margin-top: 65px;
 
     .content-container {
       .content-title {
@@ -53,7 +53,7 @@ body {
         max-height: 220px;
         overflow: hidden;
         text-overflow: ellipsis;
-        padding: 10px;
+        padding: 10px 10px 10px 0px;
       }
     }
 

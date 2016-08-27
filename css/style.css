@@ -8,9 +8,9 @@ body ul {
   width: 100%;
   position: fixed;
   z-index: 3;
-  height: 35px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
-  line-height: 35px;
   padding-left: 30px;
   margin-bottom: 30px; }
   .navigation .main-navigation .container-header {
@@ -22,7 +22,7 @@ body ul {
       display: inline-block; }
 
 .container .index-list {
-  margin-top: 50px; }
+  margin-top: 65px; }
   .container .index-list .content-container .content-title {
     font-size: 18px; }
     .container .index-list .content-container .content-title img {
@@ -34,4 +34,4 @@ body ul {
     max-height: 220px;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 10px; }
+    padding: 10px 10px 10px 0px; }
