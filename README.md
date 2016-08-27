@@ -1,4 +1,6 @@
 ### How to run this app ###
 In the terminal:
-```gulp sass```
+
+```gulp```
+
 ```npm run dev```
