@@ -4,3 +4,5 @@ In the terminal:
 ```gulp```
 
 ```live-server```
+
+App is on localhost:8080
