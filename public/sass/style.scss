@@ -32,50 +32,57 @@ body {
   }
 }
 
-.container {
-  .index-list {
-    margin-top: 65px;
+.content {
+  .container {
 
-    .content-container {
-      a {
-        color: black;
-
-        &:hover {
-          color: black;
-          text-decoration: none;
-        }
-
-        &.subtext {
-          color: #a0d6b4;;
-          font-style: italic;
-
-          &:hover {
-            text-decoration: none;
-            color: green;
-          }
-        }
-      }
-
-      .content-title {
-        font-size: 18px;
-
-        img {
-          height: 200px;
-          width: 260px;
-          float: right;
-          margin: 15px 5px 5px 5px;
-        }
-      }
-
-
-
-      .content-body {
-        max-height: 220px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        padding: 10px 10px 5px 0px;
-      }
+    .page-header {
+      margin-top: 50px;
     }
 
+    .index-list {
+      margin-top: 65px;
+
+      .content-container {
+        a {
+          color: black;
+
+          &:hover {
+            color: black;
+            text-decoration: none;
+          }
+
+          &.subtext {
+            color: #a0d6b4;;
+            font-style: italic;
+
+            &:hover {
+              text-decoration: none;
+              color: green;
+            }
+          }
+        }
+
+        .content-title {
+          font-size: 18px;
+
+          img {
+            height: 200px;
+            width: 260px;
+            float: right;
+            margin: 15px 5px 5px 5px;
+          }
+        }
+
+
+
+        .content-body {
+          max-height: 220px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 10px 10px 5px 0px;
+        }
+      }
+
+    }
   }
 }

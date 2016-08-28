@@ -22,27 +22,30 @@ body ul {
       font-weight: 400;
       display: inline-block; }
 
-.container .index-list {
+.content .container .page-header {
+  margin-top: 50px; }
+
+.content .container .index-list {
   margin-top: 65px; }
-  .container .index-list .content-container a {
+  .content .container .index-list .content-container a {
     color: black; }
-    .container .index-list .content-container a:hover {
+    .content .container .index-list .content-container a:hover {
       color: black;
       text-decoration: none; }
-    .container .index-list .content-container a.subtext {
+    .content .container .index-list .content-container a.subtext {
       color: #a0d6b4;
       font-style: italic; }
-      .container .index-list .content-container a.subtext:hover {
+      .content .container .index-list .content-container a.subtext:hover {
         text-decoration: none;
         color: green; }
-  .container .index-list .content-container .content-title {
+  .content .container .index-list .content-container .content-title {
     font-size: 18px; }
-    .container .index-list .content-container .content-title img {
+    .content .container .index-list .content-container .content-title img {
       height: 200px;
       width: 260px;
       float: right;
       margin: 15px 5px 5px 5px; }
-  .container .index-list .content-container .content-body {
+  .content .container .index-list .content-container .content-body {
     max-height: 220px;
     overflow: hidden;
     text-overflow: ellipsis;
