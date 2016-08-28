@@ -8,32 +8,15 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<ng-include src="'header.html'"></ng-include>
+		<header ng-include="'header.html'"></header>
+
 		<div ng-view></div>
 
-		<!-- <div class="container" ng-controller="ArticlesController">
-			<ul class="index-list">
 
-		    <li class="content-container" ng-repeat="content in contentCollection">
-					<section>
-						<a href="edit.html">
-							<div class="content-title">
-				        <h3 ng-bind="content.title"></h3>
-								<img src="{{content.image}}"/>
-		      		</div>
-							<p class="content-body" ng-bind="content.body"></p>
-							<a href="#" class="subtext">Read more...</a>
-						</a>
-
-						<hr>
-					</section>
-		    </li>
-		  </ul>
-		</div> -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
-		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 		<script src="js/app.js"></script>
-		<script src="js/controllers/articles.js"></script>
+		<script src="js/controllers/articles_controller.js"></script>
+		<script src="js/controllers/edit_controller.js"></script>
 	</body>
 </html>
