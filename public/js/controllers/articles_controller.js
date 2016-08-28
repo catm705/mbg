@@ -3,12 +3,8 @@ angular.module( 'articles')
   function( $scope, $http ) {
 
 
-
-
-
-
       var initializeArticlesController = function() {
-        console.log("HEY!!");
+        console.log("ArticlesController!!");
       }
 
       initializeArticlesController();
