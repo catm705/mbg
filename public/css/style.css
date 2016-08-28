@@ -1,6 +1,18 @@
 body ul {
   list-style-type: none; }
 
+body a:hover {
+  text-decoration: none; }
+
+body .ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+body hr {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
 .navigation {
   position: relative;
   z-index: 5;
@@ -27,26 +39,34 @@ body ul {
 
 .content .container .index-list {
   margin-top: 65px; }
-  .content .container .index-list .content-container a {
-    color: black; }
-    .content .container .index-list .content-container a:hover {
-      color: black;
-      text-decoration: none; }
-    .content .container .index-list .content-container a.subtext {
-      color: #a0d6b4;
-      font-style: italic; }
-      .content .container .index-list .content-container a.subtext:hover {
-        text-decoration: none;
-        color: green; }
+  .content .container .index-list .content-container section {
+    width: 900px;
+    height: 100px; }
+    .content .container .index-list .content-container section a {
+      color: black; }
+      .content .container .index-list .content-container section a:hover {
+        color: black; }
   .content .container .index-list .content-container .content-title {
-    font-size: 18px; }
+    position: relative; }
+    .content .container .index-list .content-container .content-title h3 {
+      height: 30px;
+      width: 700px;
+      font-size: 22px;
+      font-weight: 400px;
+      font-family: "Open Sans"; }
     .content .container .index-list .content-container .content-title img {
-      height: 200px;
-      width: 260px;
+      position: absolute;
+      top: 0px;
+      right: 5px;
+      height: 75px;
+      width: 100px;
       float: right;
-      margin: 15px 5px 5px 5px; }
+      margin: 0px 5px 5px 5px; }
   .content .container .index-list .content-container .content-body {
     max-height: 220px;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 10px 10px 5px 0px; }
+    padding: 0 0px 5px 0px; }
+  .content .container .index-list .content-container .subtext {
+    color: #a0d6b4;
+    font-style: italic; }

@@ -4,11 +4,13 @@
       <section>
         <a href="edit.html">
           <div class="content-title">
-            <h3 ng-bind="content.title"></h3>
+            <h3 class="ellipsis" ng-bind="content.title"></h3>
             <img src="{{content.image}}"/>
           </div>
-          <p class="content-body" ng-bind="content.body"></p>
-          <a href="#" class="subtext">Read more...</a>
+          <p class="content-body">
+            <span ng-bind="content.author.name"></span>
+          </p>
+          <span class="subtext">{{ content.publishDate | date : format : timezone}}</span>
         </a>
 
         <hr>

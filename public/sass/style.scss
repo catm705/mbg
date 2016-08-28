@@ -2,6 +2,23 @@ body {
   ul {
     list-style-type: none;
   }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
 }
 
 .navigation {
@@ -34,7 +51,6 @@ body {
 
 .content {
   .container {
-
     .page-header {
       margin-top: 50px;
     }
@@ -43,46 +59,54 @@ body {
       margin-top: 65px;
 
       .content-container {
-        a {
-          color: black;
+        section {
+          width: 900px;
+          height: 100px;
 
-          &:hover {
+          a {
             color: black;
-            text-decoration: none;
-          }
-
-          &.subtext {
-            color: #a0d6b4;;
-            font-style: italic;
 
             &:hover {
-              text-decoration: none;
-              color: green;
+              color: black;
             }
           }
         }
 
         .content-title {
-          font-size: 18px;
+          position: relative;
+
+          h3 {
+            height: 30px;
+            width: 700px;
+            font-size: 22px;
+            font-weight: 400px;
+            font-family: "Open Sans";
+          }
 
           img {
-            height: 200px;
-            width: 260px;
+            position: absolute;
+            top: 0px;
+            right: 5px;
+            height: 75px;
+            width: 100px;
             float: right;
-            margin: 15px 5px 5px 5px;
+            margin: 0px 5px 5px 5px;
           }
         }
-
-
 
         .content-body {
           max-height: 220px;
           overflow: hidden;
           text-overflow: ellipsis;
-          padding: 10px 10px 5px 0px;
+          padding: 0 0px 5px 0px;
         }
-      }
 
+        .subtext {
+          color: #a0d6b4;;
+          font-style: italic;
+        }
+
+      }
     }
   }
 }
