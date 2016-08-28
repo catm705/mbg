@@ -21,7 +21,12 @@ app.get( '/articleslist', function( req, res ) {
 } );
 
 app.post( '/articleslist', function( req, res ) {
-	console.log(req.body);
+	console.log("I'm posting in the ARTICLES LIST");
+
+		db.articleslist.insert( req.body, function(err, doc) {
+			res.json( doc );
+		} );
+
 } );
 
 app.all( '/*', function( req, res ) {

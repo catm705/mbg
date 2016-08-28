@@ -2,7 +2,7 @@
   <ul class="index-list">
     <li class="content-container" ng-repeat="content in contentCollection">
       <section>
-        <a href="edit.html">
+        <a ng-href="articles/edit/{{content.id}}">
           <div class="content-title">
             <h3 class="ellipsis" ng-bind="content.title"></h3>
             <img src="{{content.image}}"/>
