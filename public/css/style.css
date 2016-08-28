@@ -24,6 +24,17 @@ body ul {
 
 .container .index-list {
   margin-top: 65px; }
+  .container .index-list .content-container a {
+    color: black; }
+    .container .index-list .content-container a:hover {
+      color: black;
+      text-decoration: none; }
+    .container .index-list .content-container a.subtext {
+      color: #a0d6b4;
+      font-style: italic; }
+      .container .index-list .content-container a.subtext:hover {
+        text-decoration: none;
+        color: green; }
   .container .index-list .content-container .content-title {
     font-size: 18px; }
     .container .index-list .content-container .content-title img {
@@ -36,9 +47,3 @@ body ul {
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 10px 10px 5px 0px; }
-  .container .index-list .content-container a {
-    color: #a0d6b4;
-    font-style: italic; }
-    .container .index-list .content-container a:hover {
-      text-decoration: none;
-      color: green; }

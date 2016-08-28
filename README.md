@@ -7,3 +7,5 @@ App is hosted on http://localhost:3000
 node server.js
 gulp
 ```
+
+This app uses mongodo, express, angular, node, gulp, sass, and mongojs.

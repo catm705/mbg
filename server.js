@@ -1,15 +1,21 @@
 var express = require( 'express' );
 var app = express();
 var path = require('path');
+var mongojs = require('mongojs');
+var db = mongojs('articleslist', ['articleslist']);
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname + '/public')));
 
 app.get( '/', function( req, res ) {
 	res.send("Hello Peeps!");
 } );
 
-app.get( '/articles', function( req, res ) {
-	console.log("I AM IN ARTICLES")
+app.get( '/articleslist', function( req, res ) {
+	db.articleslist.find( function( err, docs ) {
+		console.log(docs);
+		console.log("If there were docs I'd log them.");
+		res.json(docs);
+	} );
 } );
 
 app.all('/*', function(req, res) {
