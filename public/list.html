@@ -1,0 +1,19 @@
+<div class="container" ng-controller="ArticlesController">
+  <ul class="index-list">
+
+    <li class="content-container" ng-repeat="content in contentCollection">
+      <section>
+        <a href="edit.html">
+          <div class="content-title">
+            <h3 ng-bind="content.title"></h3>
+            <img src="{{content.image}}"/>
+          </div>
+          <p class="content-body" ng-bind="content.body"></p>
+          <a href="#" class="subtext">Read more...</a>
+        </a>
+
+        <hr>
+      </section>
+    </li>
+  </ul>
+</div>

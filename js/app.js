@@ -1,6 +1,6 @@
 ( function() {
 
   angular
-    .module( 'articles', [] );
+    .module( 'articles', [ $ngRoute ] );
 
 } )();
