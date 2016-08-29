@@ -9,8 +9,7 @@
       })
 
       .when('/edit/:id', {
-         templateUrl: '/views/edit.html',
-         controller: 'EditController'
+         templateUrl: '/views/edit.html'
       })
       .otherwise({
          redirectTo: '/'

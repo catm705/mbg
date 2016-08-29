@@ -3,40 +3,28 @@ angular.module( 'articles' )
   [ '$scope','$routeParams', '$http',
     function ( $scope, $routeParams, $http ) {
 
-      // $scope.form = {
-      //   changed: false
-      // }
-
       $scope.save = function() {
-        console.log("I'm saving.")
+        // With a full stack app - you'd save this update to a database.
+        // With AngularJS - it automatically updates the change.
       }
 
 
       var initializeEditController = function() {
-        $http.get( '/articleslist/' )
-        .success(
-          function( response ) {
-            $scope.contentCollection = response;
+        $scope.idArray = [];
 
-            $scope.idArray = [];
+        $scope.contentCollection.forEach( function( content ) {
+          $scope.idArray.push(content.id);
 
-            $scope.contentCollection.forEach( function( content ) {
-              $scope.idArray.push(content.id);
-
-              if ( $routeParams.id && ( content.id == $routeParams.id ) ) {
-                $scope.article = content;
-              }
-            } );
-
-            var index = $scope.idArray.indexOf($routeParams.id);
-            $scope.nextArticleId = $scope.idArray[ index + 1 ];
+          if ( $routeParams.id && ( content.id == $routeParams.id ) ) {
+            $scope.article = content;
           }
-        );
+        } );
 
-        // $scope.$watch('article', function( newVal, oldVal ) {
-        //     console.log('invoked');
-        //     $scope.form.changed = true;
-        // }, true);
+        var index = $scope.idArray.indexOf($routeParams.id);
+
+        $scope.nextArticleId = $scope.idArray[ index + 1 ];
+
+
       }
 
       initializeEditController();

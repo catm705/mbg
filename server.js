@@ -12,41 +12,32 @@ app.get( '/', function( req, res ) {
 	res.render('index', {});
 } );
 
-app.get( '/articleslist', function( req, res ) {
-	db.articleslist.find( function( err, articles ) {
-		res.json(articles);
-	} );
-} );
+// app.get( '/articleslist', function( req, res ) {
+// 	db.articleslist.find( function( err, articles ) {
+// 		res.json(articles);
+// 	} );
+// } );
+//
+// app.get( '/articleslist/:id', function( req, res ) {
+// 	var id = req.params.id;
+//
+// 	db.articleslist.findOne( { _id: mongojs.ObjectId(id) },  function( err, article ) {
+// 		res.json(article);
+// 	} );
+// } );
 
-app.get( '/articleslist/:id', function( req, res ) {
-	db.articleslist.find( { id: req.params.id },  function( err, article ) {
-		res.json(article);
-	} );
-} );
+// app.put( '/articleslist/:id', function( req, res ) {
+// 	console.log("Am I getting into the PUT?");
+// 	var id = req.params.id;
+// 	console.log(req.body);
+// } );
 
-app.put( '/articleslist/:id', function( req, res ) {
-	// console.log("Updating....");
-	//
-	// db.articleslist.find( {id: req.params.id }, function( err, article ){
-	// 	console.log("Updating....", article);
-	// } );
-} );
-
-
-app.post( '/articleslist', function( req, res ) {
-	// Need function to check if db is empty - only if empty then insert
-	// db.articleslist.find( function( err, articles ) {
-	// 	if ( !articles.length || articles.length < 28 ) {
-		populateDB( req, res );
-	// 	}
-	// } );
-} );
-
-function populateDB ( req, res ) {
-	db.articleslist.insert( req.body, function( err, doc ) {
-		res.json( doc );
-	} );
-}
+// app.post( '/articleslist', function( req, res ) {
+// 	//TODO: Put check that works to see if db is empty before populating.
+// 	db.articleslist.insert( req.body, function( err, doc ) {
+// 		res.json( doc );
+// 	} );
+// } );
 
 app.all( '/*', function( req, res ) {
     res.sendFile(path.join(__dirname, 'public/index.html'));
