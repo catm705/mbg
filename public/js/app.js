@@ -5,13 +5,12 @@
     function( $routeProvider, $locationProvider ) {
       $routeProvider
       .when('/', {
-         templateUrl: '/views/list.html',
-         controller: 'ArticlesController'
+         templateUrl: '/views/list.html'
       })
 
       .when('/edit/:id', {
          templateUrl: '/views/edit.html',
-         controller: 'ArticlesController'
+         controller: 'EditController'
       })
       .otherwise({
          redirectTo: '/'

@@ -1,34 +1,36 @@
-// angular.module( 'articles' )
-// .controller( "EditController",
-//   [ '$scope','$routeParams', '$http',
-//     function ( $scope, $routeParams, $http ) {
-//
-//       $scope.save = function() {
-//         console.log("I'm saving.")
-//       }
-//
-//
-//       var initializeEditController = function() {
-//         console.log("EditController.");
-//
-//         $http.get('/articleslist/' + $routeParams.id )
-//         .success(
-//           function( response ) {
-//             response.forEach( function ( res ) {
-//               if ( res.id = $routeParams.id ) {
-//                 $scope.article = res;
-//
-//                 console.log($scope.article);
-//
-//               }
-//             } );
-//           }
-//         );
-//
-//
-//       }
-//
-//       initializeEditController();
-//     }
-//   ]
-// );
+angular.module( 'articles' )
+.controller( "EditController",
+  [ '$scope','$routeParams', '$http',
+    function ( $scope, $routeParams, $http ) {
+
+      $scope.save = function() {
+        console.log("I'm saving.")
+      }
+
+
+      var initializeEditController = function() {
+        $http.get( '/articleslist/' )
+        .success(
+          function( response ) {
+            $scope.contentCollection = response;
+
+            $scope.idArray = [];
+
+            $scope.contentCollection.forEach( function( content ) {
+              $scope.idArray.push(content.id);
+
+              if ( $routeParams.id && ( content.id == $routeParams.id ) ) {
+                $scope.article = content;
+              }
+            } );
+
+            var index = $scope.idArray.indexOf($routeParams.id);
+            $scope.nextArticleId = $scope.idArray[ index + 1 ];
+          }
+        );
+      }
+
+      initializeEditController();
+    }
+  ]
+);

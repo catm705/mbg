@@ -9,7 +9,7 @@ app.use( express.static( path.join( __dirname + '/public' ) ) );
 app.use( bodyParser.json() );
 
 app.get( '/', function( req, res ) {
-	res.send("Hello Peeps!");
+	res.render('index', {});
 } );
 
 app.get( '/articleslist', function( req, res ) {
@@ -25,18 +25,30 @@ app.get( '/articleslist/:id', function( req, res ) {
 } );
 
 app.put( '/articleslist/:id', function( req, res ) {
-	console.log("Updating....");
-
-	db.articleslist.find( {id: req.params.id }, function( err, article ){
-		console.log("Updating....", article);
-	} );
+	// console.log("Updating....");
+	//
+	// db.articleslist.find( {id: req.params.id }, function( err, article ){
+	// 	console.log("Updating....", article);
+	// } );
 } );
 
+
 app.post( '/articleslist', function( req, res ) {
+	// db.articleslist.find( function( err, articles ) {
+	// 	console.log("-------", articles.length);
+	// 	if ( !articles.length || articles.length < 28 ) {
+	// 		console.log("Populating.");
+			populateDB( req, res );
+	// 	}
+	// } );
+} );
+
+function populateDB ( req, res ) {
+	// console.log("req: ", req);
 	db.articleslist.insert( req.body, function( err, doc ) {
 		res.json( doc );
 	} );
-} );
+}
 
 app.all( '/*', function( req, res ) {
     res.sendFile(path.join(__dirname, 'public/index.html'));
