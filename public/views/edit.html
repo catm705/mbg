@@ -4,9 +4,8 @@
     <section>
       <img class="header-image" src="{{article.image}}">
 
-      <!-- <h3 class="field-input" ng-bind="article.title"></h3> -->
-      <div class="field-input" ng-bind="article.byline"></div>
-      <div class="field-input" ng-bind="article.publish_date"></div>
+      <div class="title" ng-bind="article.author.name"></div>
+      <div class="date">{{article.publishDate | date : format : timezone}}</div>
       <div class="field-input" ng-bind="article.body"></div>
     </section>
   </form>

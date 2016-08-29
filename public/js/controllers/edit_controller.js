@@ -12,13 +12,13 @@ angular.module( 'articles' )
       var initializeEditController = function() {
         console.log("EditController.");
 
-        $http.get('/articleslist', { params: { id: $routeParams.id }})
+        $http.get('/articleslist/' + $routeParams.id )
         .success(
           function( response ) {
-            
             response.forEach( function ( res ) {
               if ( res.id = $routeParams.id ) {
                 $scope.article = res;
+                console.log($scope.article);
               }
             } );
           }

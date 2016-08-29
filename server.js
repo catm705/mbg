@@ -13,7 +13,13 @@ app.get( '/', function( req, res ) {
 } );
 
 app.get( '/articleslist', function( req, res ) {
-	db.articleslist.find( selector,  function( err, docs ) {
+	db.articleslist.find( function( err, docs ) {
+		res.json(docs);
+	} );
+} );
+
+app.get( '/articleslist/:id', function( req, res ) {
+	db.articleslist.find( { id: req.params.id },  function( err, docs ) {
 		res.json(docs);
 	} );
 } );

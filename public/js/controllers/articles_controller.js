@@ -9,8 +9,6 @@ angular.module( 'articles')
           .success(
             function( response ) {
               $scope.contentCollection = response;
-              console.log("ArticlesController!!", $scope.contentCollection );
-
             }
           );
 

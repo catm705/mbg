@@ -110,10 +110,25 @@ body {
     }
 
     .edit-form {
+      h3 {
+        font-size: 22px;
+        font-family: "Open sans";
+      }
+
       .header-image {
         width: 500px;
         display: block;
         margin: 0 auto;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-size: 18px;
+        font-family: "Open sans";
+      }
+
+      .date {
+        font-style: italic;
         margin-bottom: 10px;
       }
     }

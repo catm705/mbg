@@ -71,8 +71,20 @@ body hr {
     color: #a0d6b4;
     font-style: italic; }
 
+.content .container .edit-form h3 {
+  font-size: 22px;
+  font-family: "Open sans"; }
+
 .content .container .edit-form .header-image {
   width: 500px;
   display: block;
   margin: 0 auto;
+  margin-bottom: 10px; }
+
+.content .container .edit-form .title {
+  font-size: 18px;
+  font-family: "Open sans"; }
+
+.content .container .edit-form .date {
+  font-style: italic;
   margin-bottom: 10px; }
