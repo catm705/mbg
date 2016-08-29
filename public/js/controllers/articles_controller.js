@@ -1,8 +1,29 @@
 angular.module( 'articles')
 .controller( "ArticlesController",
-  function( $scope, $http, $routeParams ) {
+  function( $scope, $http, $routeParams, myService ) {
 
       var initializeArticlesController = function() {
+        myService.getData()
+        .then(function( data ){
+          $scope.contentCollection = data;
+          console.log("contentCollection:", $scope.contentCollection);
+
+          // if ( $scope.contentCollection.length == 0 ) {
+            $scope.contentCollection.forEach(
+              function( content ) {
+                content.body = String( content.body ).replace(/<[^>]+>/gm, '');
+
+                $http.post( '/articleslist', content );
+              }
+            );
+          // }
+
+
+
+        }, function( err ) {
+            console.log('Error: ', err );
+        });
+
         $scope.idArray = [];
 
 
@@ -21,6 +42,8 @@ angular.module( 'articles')
 
               var index = $scope.idArray.indexOf($routeParams.id);
               $scope.nextArticleId = $scope.idArray[ index + 1 ];
+
+              console.log("$scope.idArray: ", $scope.idArray);
             }
           );
 
