@@ -34,17 +34,15 @@ app.put( '/articleslist/:id', function( req, res ) {
 
 
 app.post( '/articleslist', function( req, res ) {
+	// Need function to check if db is empty - only if empty then insert
 	// db.articleslist.find( function( err, articles ) {
-	// 	console.log("-------", articles.length);
 	// 	if ( !articles.length || articles.length < 28 ) {
-	// 		console.log("Populating.");
-			populateDB( req, res );
+		populateDB( req, res );
 	// 	}
 	// } );
 } );
 
 function populateDB ( req, res ) {
-	// console.log("req: ", req);
 	db.articleslist.insert( req.body, function( err, doc ) {
 		res.json( doc );
 	} );

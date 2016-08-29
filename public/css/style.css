@@ -34,67 +34,112 @@ body hr {
       font-weight: 400;
       display: inline-block; }
 
-.content .container .page-header {
-  margin-top: 50px; }
-
-.content .container .index-list {
-  margin-top: 65px; }
-  .content .container .index-list .content-container section {
-    width: 900px;
-    height: 100px; }
-    .content .container .index-list .content-container section a {
-      color: black; }
-      .content .container .index-list .content-container section a:hover {
+.content .container {
+  position: relative; }
+  .content .container .page-header {
+    margin-top: 50px; }
+  .content .container .index-list {
+    margin-top: 65px; }
+    .content .container .index-list .content-container section {
+      width: 900px;
+      height: 100px; }
+      .content .container .index-list .content-container section a {
         color: black; }
-  .content .container .index-list .content-container .content-title {
-    position: relative; }
-    .content .container .index-list .content-container .content-title h3 {
-      height: 30px;
-      width: 700px;
-      font-size: 22px;
-      font-weight: 400px;
-      font-family: "Open Sans"; }
-    .content .container .index-list .content-container .content-title img {
-      position: absolute;
-      top: 0px;
-      right: 5px;
-      height: 75px;
-      width: 100px;
+        .content .container .index-list .content-container section a:hover {
+          color: black; }
+    .content .container .index-list .content-container .content-title {
+      position: relative; }
+      .content .container .index-list .content-container .content-title h3 {
+        color: grey;
+        height: 30px;
+        width: 700px;
+        font-size: 22px;
+        font-weight: 400px;
+        font-family: "Open Sans"; }
+      .content .container .index-list .content-container .content-title img {
+        position: absolute;
+        top: 0px;
+        right: 5px;
+        height: 75px;
+        width: 100px;
+        float: right;
+        margin: 0px 5px 5px 5px; }
+    .content .container .index-list .content-container .content-body {
+      color: gray;
+      max-height: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding: 0 0px 5px 0px; }
+    .content .container .index-list .content-container .subtext {
+      color: #a0d6b4;
+      font-style: italic; }
+  .content .container .buttons {
+    width: 900px;
+    height: 5px;
+    margin: 0 auto;
+    margin-top: 50px; }
+    .content .container .buttons .back {
+      float: left; }
+    .content .container .buttons .crumb {
+      float: right; }
+    .content .container .buttons a {
+      color: #a0d6b4; }
+  .content .container .edit-form .page-header {
+    color: gray;
+    font-size: 22px;
+    font-family: "Open sans";
+    width: 900px;
+    margin: 20px auto;
+    border: none; }
+  .content .container .edit-form .header-image {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px; }
+  .content .container .edit-form .edit-body {
+    width: 900px;
+    margin: 0 auto;
+    text-align: justify; }
+    .content .container .edit-form .edit-body .title {
+      color: gray;
+      font-size: 18px;
+      font-family: "Open sans";
+      border: none; }
+    .content .container .edit-form .edit-body .date {
+      color: gray;
+      font-family: "Open sans";
+      font-style: italic;
+      margin-bottom: 10px;
+      border: none; }
+    .content .container .edit-form .edit-body .edit-content {
+      line-height: 22px;
+      font-family: "Open sans";
+      border: 1px solid #ececec;
+      padding: 10px;
+      width: 900px;
+      height: 100%;
+      min-height: 350px; }
+  .content .container .toolbar {
+    margin: 0 auto;
+    height: 100%;
+    width: 56px;
+    background-color: #a0d6b4; }
+    .content .container .toolbar .toolbar-btn {
+      margin-top: 10px;
+      margin-bottom: 100px;
+      font-family: "Open sans";
+      cursor: pointer;
       float: right;
-      margin: 0px 5px 5px 5px; }
-  .content .container .index-list .content-container .content-body {
-    max-height: 220px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 0 0px 5px 0px; }
-  .content .container .index-list .content-container .subtext {
-    color: #a0d6b4;
-    font-style: italic; }
-
-.content .container .buttons {
-  height: 5px;
-  margin-top: 50px; }
-  .content .container .buttons .back {
-    float: left; }
-  .content .container .buttons .crumb {
-    float: right; }
-  .content .container .buttons a {
-    color: #a0d6b4; }
-
-.content .container .edit-form h3 {
-  font-size: 22px;
-  font-family: "Open sans"; }
-
-.content .container .edit-form .header-image {
-  width: 500px;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 10px; }
-
-.content .container .edit-form .title {
-  font-size: 18px;
-  font-family: "Open sans"; }
-
-.content .container .edit-form .date {
-  font-style: italic;
-  margin-bottom: 10px; }
+      padding: 1.05rem 2.75rem;
+      color: #a0d6b4;
+      background-color: #fff;
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      border-radius: 12rem;
+      border: .2rem solid #a0d6b4;
+      -webkit-transition: color .3s,border .3s;
+      transition: color .3s,border .3s; }
+      .content .container .toolbar .toolbar-btn:hover {
+        color: #8feebd;
+        border: .2rem solid #8feebd; }

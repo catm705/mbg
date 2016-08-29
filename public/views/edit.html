@@ -8,13 +8,19 @@
     </div>
   </nav>
   <form class="edit-form" ng-if="article">
-    <h3 class="page-header">{{article.title}}</h3>
+    <input type="text" ng-model="article.title" class="page-header"></h3>
     <section>
       <img class="header-image" src="{{article.image}}">
-
-      <div class="title" ng-bind="article.author.name"></div>
-      <div class="date">{{article.publishDate | date : format : timezone}}</div>
-      <div class="field-input" ng-bind="article.body"></div>
+      <div class="edit-body">
+        <input type="text" class="title" ng-model="article.author.name" />
+        <div type="text" class="date">{{article.publishDate | date :'MM/dd/yyyy @ h:mma'}}</div>
+        <textarea class="edit-content" ng-model="article.body" ng-bind="article.body"></textarea>
+      </div>
     </section>
   </form>
+
+  <div class="toolbar">
+    <a class="toolbar-btn" ng-class="{'active': form.changed}" ng-click="save()">Save</a>
+  </div>
+
 </div>

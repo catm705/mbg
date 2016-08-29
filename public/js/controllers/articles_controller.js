@@ -13,9 +13,7 @@ angular.module( 'articles')
 
 
       var initializeArticlesController = function() {
-        if ( !$scope.contentCollection && !$scope.idArray ) {
-          console.log("Repopulating the database.");
-
+        if ( !$scope.contentCollection ) {
           myService.getData()
           .then( function( data ) {
             $scope.contentCollection = data;

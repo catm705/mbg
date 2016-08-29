@@ -51,6 +51,8 @@ body {
 
 .content {
   .container {
+    position: relative;
+
     .page-header {
       margin-top: 50px;
     }
@@ -76,6 +78,7 @@ body {
           position: relative;
 
           h3 {
+            color: grey;
             height: 30px;
             width: 700px;
             font-size: 22px;
@@ -95,6 +98,7 @@ body {
         }
 
         .content-body {
+          color: gray;
           max-height: 220px;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -110,7 +114,9 @@ body {
     }
 
     .buttons {
+      width: 900px;
       height: 5px;
+      margin: 0 auto;
       margin-top: 50px;
 
       .back {
@@ -127,9 +133,13 @@ body {
     }
 
     .edit-form {
-      h3 {
+      .page-header {
+        color: gray;
         font-size: 22px;
         font-family: "Open sans";
+        width: 900px;
+        margin: 20px auto;
+        border: none;
       }
 
       .header-image {
@@ -139,14 +149,65 @@ body {
         margin-bottom: 10px;
       }
 
-      .title {
-        font-size: 18px;
-        font-family: "Open sans";
-      }
+      .edit-body {
+        width: 900px;
+        margin: 0 auto;
+        text-align: justify;
 
-      .date {
-        font-style: italic;
-        margin-bottom: 10px;
+        .title {
+          color: gray;
+          font-size: 18px;
+          font-family: "Open sans";
+          border: none;
+        }
+
+        .date {
+          color: gray;
+          font-family: "Open sans";
+          font-style: italic;
+          margin-bottom: 10px;
+          border: none;
+        }
+
+        .edit-content {
+          line-height: 22px;
+          font-family: "Open sans";
+          border: 1px solid #ececec;
+          padding: 10px;
+          width: 900px;
+          height: 100%;
+          min-height: 350px;
+        }
+      }
+    }
+
+    .toolbar {
+      margin: 0 auto;
+      height: 100%;
+      width: 56px;
+      background-color: #a0d6b4;
+
+      .toolbar-btn {
+        margin-top: 10px;
+        margin-bottom: 100px;
+        font-family: "Open sans";
+        cursor: pointer;
+        float: right;
+        padding: 1.05rem 2.75rem;
+        color: #a0d6b4;
+        background-color: #fff;
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        border-radius: 12rem;
+        border: .2rem solid #a0d6b4;
+        -webkit-transition: color .3s,border .3s;
+                transition: color .3s,border .3s;
+
+        &:hover {
+          color: #8feebd;
+          border: .2rem solid #8feebd;
+        }
       }
     }
   }

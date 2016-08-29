@@ -3,6 +3,10 @@ angular.module( 'articles' )
   [ '$scope','$routeParams', '$http',
     function ( $scope, $routeParams, $http ) {
 
+      // $scope.form = {
+      //   changed: false
+      // }
+
       $scope.save = function() {
         console.log("I'm saving.")
       }
@@ -28,6 +32,11 @@ angular.module( 'articles' )
             $scope.nextArticleId = $scope.idArray[ index + 1 ];
           }
         );
+
+        // $scope.$watch('article', function( newVal, oldVal ) {
+        //     console.log('invoked');
+        //     $scope.form.changed = true;
+        // }, true);
       }
 
       initializeEditController();
