@@ -4,6 +4,7 @@ angular.module( 'articles')
   function( $scope, $http, myService ) {
 
       var applicationControllerInitialize = function() {
+        $scope.contentColletion;
         // $scope.empty = true;
         //
         // if ( $scope.empty ) {

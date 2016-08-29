@@ -2,50 +2,55 @@ angular.module( 'articles')
 .controller( "ArticlesController",
   function( $scope, $http, $routeParams, myService ) {
 
-      var initializeArticlesController = function() {
-        myService.getData()
-        .then(function( data ){
-          $scope.contentCollection = data;
-          console.log("contentCollection:", $scope.contentCollection);
+    $scope.save = function( ) {
+      console.log("Saving...");
+      $http.put( '/articleslist/' + $routeParams.id )
+      .success( function( res ) {
+        console.log(res);
+        debugger;
+      } );
+    }
 
-          // if ( $scope.contentCollection.length == 0 ) {
+
+      var initializeArticlesController = function() {
+        if ( !$scope.contentCollection ) {
+          myService.getData()
+          .then(function( data ) {
+            $scope.contentCollection = data;
+
             $scope.contentCollection.forEach(
               function( content ) {
                 content.body = String( content.body ).replace(/<[^>]+>/gm, '');
-
                 $http.post( '/articleslist', content );
               }
             );
-          // }
 
+            $scope.idArray = [];
 
+            $scope.contentCollection.forEach( function( content ) {
+              $scope.idArray.push(content.id);
 
-        }, function( err ) {
-            console.log('Error: ', err );
-        });
+              if ( $routeParams.id && content.id == $routeParams.id ) {
+                $scope.article = content;
+              }
+            } );
 
-        $scope.idArray = [];
+            var index = $scope.idArray.indexOf($routeParams.id);
+            $scope.nextArticleId = $scope.idArray[ index + 1 ];
 
+          }, function( err ) {
+              console.log('Error: ', err );
+          } );
+        }
 
-        $http.get('/articleslist')
-          .success(
-            function( response ) {
-              $scope.contentCollection = response;
+        if ( $routeParams.id ) {
+          $http.get( '/articleslist/' + $routeParams.id )
+          .success( function( res ) {
+            console.log(res);
+            // debugger;
+          } );
+        }
 
-              $scope.contentCollection.forEach( function( content ) {
-                $scope.idArray.push(content.id);
-
-                if ( $routeParams.id && content.id == $routeParams.id ) {
-                  $scope.article = content;
-                }
-              } );
-
-              var index = $scope.idArray.indexOf($routeParams.id);
-              $scope.nextArticleId = $scope.idArray[ index + 1 ];
-
-              console.log("$scope.idArray: ", $scope.idArray);
-            }
-          );
 
       }
 
