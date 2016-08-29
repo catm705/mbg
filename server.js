@@ -13,20 +13,15 @@ app.get( '/', function( req, res ) {
 } );
 
 app.get( '/articleslist', function( req, res ) {
-	db.articleslist.find( function( err, docs ) {
-		console.log(docs);
-		console.log("If there were docs I'd log them.");
+	db.articleslist.find( selector,  function( err, docs ) {
 		res.json(docs);
 	} );
 } );
 
 app.post( '/articleslist', function( req, res ) {
-	console.log("I'm posting in the ARTICLES LIST");
-
-		db.articleslist.insert( req.body, function(err, doc) {
-			res.json( doc );
-		} );
-
+	db.articleslist.insert( req.body, function( err, doc ) {
+		res.json( doc );
+	} );
 } );
 
 app.all( '/*', function( req, res ) {

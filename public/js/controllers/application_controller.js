@@ -9,9 +9,9 @@ angular.module( 'articles')
           $http.get('https://s3.amazonaws.com/mbgd/feed/prod-test-7fc12640-6f09-4461-b683-3e55acdfd4f4.json').
             success(
               function( data, status, headers, config ) {
-                $scope.contentCollection = data;
+                $scope.articlesContent = data;
 
-                $scope.contentCollection.forEach(
+                $scope.articlesContent.forEach(
                   function( content ) {
                     content.body = String( content.body ).replace(/<[^>]+>/gm, '');
 

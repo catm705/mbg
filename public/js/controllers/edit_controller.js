@@ -1,18 +1,33 @@
 angular.module( 'articles' )
 .controller( "EditController",
-  function( $scope, $timeout, $http ) {
+  [ '$scope','$routeParams', '$http',
+    function ( $scope, $routeParams, $http ) {
 
-    $scope.save = function(){
-      console.log("I'm saving.")
+      $scope.save = function() {
+        console.log("I'm saving.")
+      }
+
+
+
+      var initializeEditController = function() {
+        console.log("EditController.");
+
+        $http.get('/articleslist', { params: { id: $routeParams.id }})
+        .success(
+          function( response ) {
+            
+            response.forEach( function ( res ) {
+              if ( res.id = $routeParams.id ) {
+                $scope.article = res;
+              }
+            } );
+          }
+        );
+
+
+      }
+
+      initializeEditController();
     }
-
-
-
-    var initializeEditController = function() {
-
-      console.log("EditController!!");
-    }
-
-    initializeEditController();
-  }
+  ]
 );

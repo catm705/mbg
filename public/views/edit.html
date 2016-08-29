@@ -1,13 +1,13 @@
 <div class="container">
   <h3 class="page-header">Edit</h3>
-  <form class="edit-form">
+  <form class="edit-form" ng-if="article">
     <section>
-      <!-- <img src="">
+      <img src="{{article.image}}">
 
-      <div class="field-input" ng-bind="article.title"></div>
+      <h3 class="field-input" ng-bind="article.title"></h3>
       <div class="field-input" ng-bind="article.byline"></div>
       <div class="field-input" ng-bind="article.publish_date"></div>
-      <div class="field-input" ng-bind="article.body"></div> -->
+      <div class="field-input" ng-bind="article.body"></div>
     </section>
   </form>
 </div>
