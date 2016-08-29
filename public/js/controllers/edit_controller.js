@@ -8,7 +8,6 @@ angular.module( 'articles' )
       }
 
 
-
       var initializeEditController = function() {
         console.log("EditController.");
 
@@ -18,7 +17,9 @@ angular.module( 'articles' )
             response.forEach( function ( res ) {
               if ( res.id = $routeParams.id ) {
                 $scope.article = res;
+
                 console.log($scope.article);
+
               }
             } );
           }

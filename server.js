@@ -25,10 +25,26 @@ app.get( '/articleslist/:id', function( req, res ) {
 } );
 
 app.post( '/articleslist', function( req, res ) {
+
+	// db.articleslist.count(function (err, count) {
+  //   if ( !err && count === 0 ) {
+	// 		console.log("COUNT: ", count );
+	//
+			populateDB(req, res);
+
+			// db.articleslist.insert( req.body, function( err, doc ) {
+			// 	res.json( doc );
+			// } );
+		  // }
+		// });
+} );
+
+function populateDB( req, res ) {
+	console.log("req: ", req );
 	db.articleslist.insert( req.body, function( err, doc ) {
 		res.json( doc );
 	} );
-} );
+}
 
 app.all( '/*', function( req, res ) {
     res.sendFile(path.join(__dirname, 'public/index.html'));

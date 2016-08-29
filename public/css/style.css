@@ -71,6 +71,16 @@ body hr {
     color: #a0d6b4;
     font-style: italic; }
 
+.content .container .buttons {
+  height: 5px;
+  margin-top: 50px; }
+  .content .container .buttons .back {
+    float: left; }
+  .content .container .buttons .crumb {
+    float: right; }
+  .content .container .buttons a {
+    color: #a0d6b4; }
+
 .content .container .edit-form h3 {
   font-size: 22px;
   font-family: "Open sans"; }

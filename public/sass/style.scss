@@ -102,10 +102,27 @@ body {
         }
 
         .subtext {
-          color: #a0d6b4;;
+          color: #a0d6b4;
           font-style: italic;
         }
 
+      }
+    }
+
+    .buttons {
+      height: 5px;
+      margin-top: 50px;
+
+      .back {
+        float: left;
+      }
+
+      .crumb {
+        float: right;
+      }
+
+      a {
+        color: #a0d6b4;
       }
     }
 

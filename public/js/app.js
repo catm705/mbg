@@ -11,7 +11,7 @@
 
       .when('/edit/:id', {
          templateUrl: '/views/edit.html',
-         controller: 'EditController'
+         controller: 'ArticlesController'
       })
       .otherwise({
          redirectTo: '/'

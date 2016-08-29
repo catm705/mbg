@@ -1,4 +1,12 @@
 <div class="container">
+  <nav class="buttons">
+    <div class="back">
+      <a ng-href="#">Back to Articles List</a>
+    </div>
+    <div class="crumb">
+      <a ng-href="#/edit/{{nextArticleId}}">Next Article</a>
+    </div>
+  </nav>
   <form class="edit-form" ng-if="article">
     <h3 class="page-header">{{article.title}}</h3>
     <section>
