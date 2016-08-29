@@ -4,7 +4,9 @@
       <a ng-href="#">Back to Articles List</a>
     </div>
     <div class="crumb">
-      <a ng-href="#/edit/{{nextArticleId}}">Next Article</a>
+      <a ng-href="#/edit/{{nextArticleId}}">
+        <span ng-if="index < idArray.length-1">Next Article</span>
+      </a>
     </div>
   </nav>
   <form class="edit-form">
@@ -14,7 +16,7 @@
       <div class="edit-body">
         <input type="text" class="title" ng-model="article.author.name" />
         <div type="text" class="date">{{article.publishDate | date :'MM/dd/yyyy @ h:mma'}}</div>
-        <textarea class="edits-content" ng-model="article.body" ng-bind="article.body"></textarea>
+        <textarea class="edit-content" ng-model="article.body" ng-bind="article.body"></textarea>
       </div>
     </section>
   </form>
