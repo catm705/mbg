@@ -1,7 +1,7 @@
 <div class="container" ng-controller="EditController">
   <nav class="buttons">
     <div class="back">
-      <a ng-href="#">Back to Articles List</a>
+      <a ng-href="#">Back to Articles</a>
     </div>
     <div class="crumb">
       <a ng-href="#/edit/{{nextArticleId}}">
@@ -10,7 +10,9 @@
     </div>
   </nav>
   <form class="edit-form">
-    <input type="text" ng-model="article.title" class="page-header"></h3>
+    <div class="page-header">
+      <input type="text" ng-model="article.title">
+    </div>
     <section>
       <img class="header-image" src="{{article.image}}">
       <div class="edit-body">

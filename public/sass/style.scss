@@ -44,6 +44,15 @@ body {
         color: white;
         font-weight: 400;
         display: inline-block;
+
+        a {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
       }
     }
   }
@@ -118,6 +127,7 @@ body {
       height: 5px;
       margin: 0 auto;
       margin-top: 50px;
+      text-transform: uppercase;
 
       .back {
         float: left;
@@ -139,7 +149,15 @@ body {
         font-family: "Open sans";
         width: 900px;
         margin: 20px auto;
-        border: none;
+
+        input {
+          width: 900px;
+          text-align: center;
+          border: none;
+          display: block;
+          margin: 0 auto;
+
+        }
       }
 
       .header-image {

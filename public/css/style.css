@@ -33,6 +33,11 @@ body hr {
       color: white;
       font-weight: 400;
       display: inline-block; }
+      .navigation .main-navigation .container-header .heading a {
+        color: white;
+        text-decoration: none; }
+        .navigation .main-navigation .container-header .heading a:hover {
+          text-decoration: none; }
 
 .content .container {
   position: relative; }
@@ -77,7 +82,8 @@ body hr {
     width: 900px;
     height: 5px;
     margin: 0 auto;
-    margin-top: 50px; }
+    margin-top: 50px;
+    text-transform: uppercase; }
     .content .container .buttons .back {
       float: left; }
     .content .container .buttons .crumb {
@@ -89,8 +95,13 @@ body hr {
     font-size: 22px;
     font-family: "Open sans";
     width: 900px;
-    margin: 20px auto;
-    border: none; }
+    margin: 20px auto; }
+    .content .container .edit-form .page-header input {
+      width: 900px;
+      text-align: center;
+      border: none;
+      display: block;
+      margin: 0 auto; }
   .content .container .edit-form .header-image {
     width: 500px;
     display: block;
