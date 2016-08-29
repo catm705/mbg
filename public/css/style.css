@@ -70,3 +70,9 @@ body hr {
   .content .container .index-list .content-container .subtext {
     color: #a0d6b4;
     font-style: italic; }
+
+.content .container .edit-form .header-image {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px; }
